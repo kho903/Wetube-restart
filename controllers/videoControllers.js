@@ -10,7 +10,7 @@ export const search = (req, res) =>{
     } = req;
     // 위 명령어는 const searchingBy = req.query.terms 와 같다.
     console.log(searchingBy);
-    res.render("search", { pageTitle: "Search", searchingBy });
+    res.render("search", { pageTitle: "Search", searchingBy, videos });
 }
 
 export const upload = (req, res) => res.render("upload", { pageTitle: "Upload" });
