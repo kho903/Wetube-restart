@@ -1,3 +1,5 @@
+import { deleteVideo } from "./controllers/videoControllers";
+
 // Global
 const HOME = "/";
 const JOIN = "/join";
@@ -52,7 +54,13 @@ const routes = {
             return EDIT_VIDEO;
         }
     },
-    deleteVideo: DELETE_VIDEO,
+    deleteVideo: (id) => {
+        if(id){
+            return `/videos/${id}/delete`
+        } else{
+            return DELETE_VIDEO;
+        }
+    },
 }
 
 export default routes;
